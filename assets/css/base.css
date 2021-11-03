@@ -36,7 +36,7 @@ html {
     padding-right: 5px;
 }
 .gird__col-2-4 {
-    width: 20%;
+    width: 25%;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -44,6 +44,35 @@ html {
     width: 83.3334%;
     padding-left: 5px;
     padding-right: 5px;
+}
+.btn {
+    height: 37px;
+    min-width: 100px;
+    line-height: 37px;
+    color: #fff;
+    background-color:#4accd4 ;
+    border-radius: 24px;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+.btn-lg {
+    width: 262px;
+}
+.btn--black {
+    background-color: #000;
+}
+.button-buy {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 12px 16px;
+    background-color: black;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.button-buy:hover {
+    color: var(--text-hover-color);
 }
 
 /* animation */

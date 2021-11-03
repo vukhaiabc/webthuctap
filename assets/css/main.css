@@ -1,5 +1,4 @@
-#header{
-
+#header {
 }
 
 .announcement {
@@ -18,7 +17,7 @@
 }
 .site-header-sticky {
     height: 152px;
-    padding : 30px 0px;
+    padding: 30px 0px;
 }
 .header-layout {
     display: flex;
@@ -51,19 +50,22 @@
 }
 .header-navbar__info-item-title {
     font-size: 2.4rem;
-    margin: 0;    
+    margin: 0;
 }
 
 .header-navbar__info-item-submenu {
+    z-index: 2;
+    background-color: #fff;
     list-style: none;
     position: absolute;
     padding: 0;
-    min-width: 150px;
+    min-width: 180px;
     box-shadow: 5px 10px 8px rgb(184, 183, 183);
-    left:-4px;
+    left: -4px;
     display: none;
+    border-radius: 6px;
 }
-.header-navbar__info-item-submenu li a{
+.header-navbar__info-item-submenu li a {
     display: block;
     text-decoration: none;
     font-size: 1.8rem;
@@ -74,11 +76,385 @@
 .header-navbar__info-item:hover {
     color: var(--text-hover-color);
 }
-.header-navbar__info-item:hover .header-navbar__info-item-submenu{
+.header-navbar__info-item:hover .header-navbar__info-item-submenu {
     display: block;
 }
 .header-navbar__info-item-submenu li a:hover {
     color: var(--text-hover-color);
 }
 
+/* slide show */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    position: relative;
+}
+/* ẩn hình ảnh cho phần tử slideshow */
+.mySlides {
+    display: none;
+}
+.mySlide {
+    display: none;
+}
 
+.mySlides.active {
+    display: block;
+}
+/* thiết kế nút mũi tên*/
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 14px 18px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.2s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border-radius: 50%;
+    background-color: rgba(202, 199, 199, 0.7);
+}
+/* thiết kế nút mũi tên next nằm phía bên phải */
+.next {
+    right: 0;
+}
+/* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+/* Thiết lập style cho nội dung của mỗi phần tử slideshow */
+
+/* Thiết lập style cho số hiển thị của phần tử */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.slides-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* thiết lập style  nút tròn điều khiển*/
+.control {
+    cursor: pointer;
+    height: 6px;
+    width: 30px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.control:hover {
+    background-color: #717171;
+}
+/* tạo hiệu ứng chuyển động fade */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 0.8s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    from {
+        transform: scale(0.5);
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* end slide */
+.note-wrapper {
+    margin: 32px 0;
+    min-height: 84px;
+    text-align: center;
+}
+.note-wrapper h1 {
+    font-size: 28px;
+}
+.note-wrapper p {
+    font-size: 22px;
+    font-weight: 500;
+}
+.product-item {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+}
+.product-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+.product-item__img {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.product-item__info-name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.product-item__price {
+    margin: 16px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* slide 2 */
+.changeslide {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.changeslide ul {
+    list-style-type: none;
+}
+.changeslide ul li {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-indent: -9999px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 20px 10px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+.changeslide ul li:hover {
+    background-color: violet;
+}
+.changeslide .kichhoat {
+    background-color: violet !important;
+}
+.allslide {
+    margin: 60px 0;
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+.slide {
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+.slide.activeslide .noidungtext {
+    animation: show1 1s forwards;
+}
+@keyframes show1 {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.slide.activeslide {
+    opacity: 1;
+}
+.slide .bg1 {
+    background: url(../img/slide21.jpg) no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.slide .bg2 {
+    background: url(../img/slide22.jpg) no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.slide .bg3 {
+    background: url(../img/slide23.jpg) no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.noidungtext {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: 0.4s;
+    width: 300px;
+    right: -30px;
+    top: 350px;
+    cursor: pointer;
+}
+.noidungtext .slide-title {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+.gift-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.content-gift {
+    width: 50%;
+    text-align: center;
+}
+.content-gift__name {
+    font-size: 2.4rem;
+}
+.content-gift__des {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.img-gift {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.img-gift-item {
+    flex-basis: 50%;
+}
+.img-gift-item img {
+    width: 100%;
+}
+.submit-photos {
+    font-size: 2.4rem;
+    margin: auto;
+}
+.votes .collections {
+    margin: 30px auto;
+}
+.votes .collections {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.collections .collection-item a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 4px 6px;
+    color: #000;
+    font-weight: bold;
+}
+#footer .footer-title {
+    margin: auto;
+    text-align: center;
+}
+.footer-title .footer-title-item {
+    font-size: 2.4rem;
+}
+.footer-title p {
+    font-size: 1.4rem;
+}
+.form-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+.form-info .form-info-item {
+    width: 42%;
+}
+.form-info .submit-form-info {
+    width: 12%;
+    color: #fff;
+    background-color: var(--text-hover-color);
+    border: none;
+    border-radius: 3px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form-info input:focus {
+    box-shadow: 5px 10px 12px #c9cbcf;
+    border: 2px solid #555;
+}
+.form-info input {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-size: 1.6rem;
+    padding: 8px 12px;
+    border-radius: 3px;
+    border: 1px solid rgb(209, 209, 209);
+}
+.footer-icons-info {
+    margin: auto;
+}
+.footer-icons-info .footer-item__link {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    height: 56px;
+    width: 56px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin: 8px 8px;
+}
+.footer-icons-info .footer-item__link i {
+    font-size: 2.6rem;
+    color: #333;
+    line-height: 56px;
+}
+.contact-us {
+    margin: auto;
+    margin-top: 12px;
+}
+.contact-us a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 8px 12px;
+    color: #000;
+}
+.contact-us a:hover {
+    color: var(--text-hover-color);
+}
+.payment-icons {
+    list-style: none;
+    margin: 16px auto;
+}
+.payment-icons .icon--payment {
+    display: inline-block;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+.the-end-web {
+    margin: 16px auto;
+    font-size: 1.4rem;
+}
+.the-end-web a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 10px;
+}
+.the-end-web a:hover {
+    color: var(--text-hover-color);
+}
